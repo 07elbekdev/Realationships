@@ -52,6 +52,7 @@ public class PhonesRepoImpl implements PhonesRepository {
         try (Session session = sessionfactory.openSession()) {
             session.beginTransaction();
             session.createQuery("delete from Phones p").executeUpdate();
+            session.createQuery("delete from Person p").executeUpdate();
             session.getTransaction().commit();
         }
     }
