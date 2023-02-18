@@ -15,7 +15,8 @@ public class Person {
     @Column(name = "first_name")
     private String name;
     private int age;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
+    @JoinColumn(name = "phones_id")
     private Phones phones;
 
     public Person() {

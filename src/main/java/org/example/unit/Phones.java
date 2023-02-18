@@ -14,8 +14,7 @@ public class Phones {
     @Column(name = "model")
     private String model;
     private int date;
-    @OneToOne(mappedBy = "phones", fetch = FetchType.EAGER)
-    @JoinColumn(name = "person_id")
+    @OneToOne(mappedBy = "phones", cascade = CascadeType.ALL)
     private Person person;
 
     public Phones() {

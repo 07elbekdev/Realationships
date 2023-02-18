@@ -2,6 +2,7 @@ package org.example.repository.impl;
 
 import org.example.configuration.Connection;
 import org.example.repository.PhonesRepository;
+import org.example.unit.Person;
 import org.example.unit.Phones;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -34,8 +35,6 @@ public class PhonesRepoImpl implements PhonesRepository {
             Phones phones = getById(id);
             session.delete(phones);
             session.getTransaction().commit();
-        }catch (Exception e){
-            e.getStackTrace();
         }
     }
 

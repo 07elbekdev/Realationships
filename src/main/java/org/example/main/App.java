@@ -1,7 +1,6 @@
 package org.example.main;
 
 import org.example.repository.impl.PersonRepositoryImpl;
-import org.example.repository.impl.PhonesRepoImpl;
 import org.example.unit.Person;
 import org.example.unit.Phones;
 
@@ -14,8 +13,8 @@ public class App {
         Person person = new Person("Kutman", 16, phones);
         Person person1 = new Person("Dustman", 18, phones1);
         Person person2 = new Person("Arie", 17, phones2);
+
         PersonRepositoryImpl personRepository = new PersonRepositoryImpl();
-        PhonesRepoImpl phonesRepo = new PhonesRepoImpl();
-        phonesRepo.deleteById(6l);
+        
     }
 }
